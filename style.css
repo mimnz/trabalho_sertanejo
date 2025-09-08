@@ -26,7 +26,7 @@ body {
 }
 
 .titulo {
-    display: flex; /* Cria um Flexbox para o ícone e o título */
+    display: flex; 
     align-items: center;
     margin-left: 20px;
     color:rgb(175, 63, 11);
@@ -113,7 +113,7 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 20px;
-    text-align: left;
+    text-align: center;
 }
 
 .redes-sociais {
@@ -123,14 +123,12 @@ body {
     justify-content: center;
     justify-self: center;
     display: flex;
-    min-width: 700px;
     height: 50px;
 }
 
 
 
 .rede-social {
-    margin-right: 10px;
     width: 50px;
     height: 50px;
     align-items: center;
@@ -145,10 +143,12 @@ body {
 .rede-social:hover {
     background-color: #a73f0f;
     transform: scale(1.2);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.267);
 }
 
 .imagem-rede-social {
     width: 60%;
+    justify-self: center;
 
 }
 
