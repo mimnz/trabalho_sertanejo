@@ -12,7 +12,6 @@ body {
 body {
 
     background-size: cover;
-
     /* Centraliza tudo na tela */
     display: flex;
     justify-content: center;
@@ -35,27 +34,37 @@ body {
 h3 {
     font-size: 25px;
     font-weight: normal;
+    color: rgb(136, 53, 28);
 }
 
 form {
     margin-bottom: 20px;
     width: 500px;
     align-self: center;
+    justify-self: center;
     background-color: #cca277;
     padding: 30px 40px;
     border-radius: 12px;
     /* borda leve */
 }
 
+.form-group :hover {
+    transform: scale(1.05);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.267);
+}
+
 form .form-group {
     margin-top: 15px;
+    transition: all .4s ease;
 }
 
 /* Labels padrão */
 label {
     display: block;
     margin-bottom: 8px;
-    color: white;
+    color: rgb(136, 53, 28);
+    transition: all .4s ease;
 }
 
 /* Labels especiais (ficam lado a lado) */
@@ -65,6 +74,7 @@ label[for="javascript"],
 label[for="php"] {
     display: inline-block;
     margin-right: 25px;
+    transition: all .4s ease;
 }
 
 input[type="text"],
@@ -80,6 +90,7 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    transition: all .4s ease;
 }
 
 textarea {
@@ -90,6 +101,8 @@ textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    transition: all .4s ease;
+
 }
 
 button {
@@ -102,10 +115,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-}
+    transition: all .4s ease;
 
-button:hover {
-    background-color: #F0BB78;
 }
 
 /* Froala customizações */
@@ -118,6 +129,7 @@ button:hover {
     align-items: center;
     padding: 10px;
     max-width: 100%;
+    transition: all .4s ease;
 }
 
 /* Estilo para cada botão da toolbar */
@@ -134,6 +146,7 @@ button:hover {
 .error {
     color: red;
     font-size: 14px;
+    transition: all .4s ease;
 }
 
 .form-group {
