@@ -15,7 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 100px;
-    min-height: 100vh;
+    min-height: 100%;
     /* cobre toda a tela */
     width: 100%;
 }
@@ -38,15 +38,15 @@ body {
 .letra {
 
     background-color: #cca277;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.267);
     /* vermelho */
-    border: 2px solid #f8f8f8;
     border-radius: 20px;
     padding: 20px;
     width: 500px;
     /* largura consistente */
     box-sizing: border-box;
     min-height: 250px;
-    text-align: justify;
+    text-align: center;
 
 }
 
@@ -60,6 +60,8 @@ h2 {
 .letra h2 {
     text-align: center;
     margin-bottom: 15px;
+    transition: all .4s ease;
+    color: rgb(83, 29, 13);
 }
 
 /* Texto da letra */
@@ -67,16 +69,17 @@ h2 {
     font-size: 16px;
     line-height: 1.7;
     font-weight: 700;
-    text-align: justify;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    text-align: center;
+    transition: all .4s ease;
+    color: rgb(105, 35, 13);
 }
 
-/*zoom com profundidade*/
-.letra:hover {
-    transform: scale(1.05);
-    /* aumenta levemente */
-    color: blueviolet;
-
+.letra :hover {
+    transform: scale(1.12);
+    color: #3f0909;
+    background-color: #d88d5b2a;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.267);
 }
 
 @keyframes escrevendo_e_apagando {
