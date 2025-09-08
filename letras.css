@@ -82,27 +82,3 @@ h2 {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.267);
 }
 
-@keyframes escrevendo_e_apagando {
-    0% {
-        width: 0;
-    }
-    50% {
-        width: 100%;
-    }
-    75% {
-        width: 100%;
-    }
-    100% {
-        width: 0;
-    }
-}
-
-/* Animação para o cursor piscando */
-@keyframes cursor_piscando {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: #8f4c1596;
-    }
-}
