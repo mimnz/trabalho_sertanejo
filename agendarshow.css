@@ -1,0 +1,166 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: auto;
+}
+
+body {
+
+    background-size: cover;
+
+    /* Centraliza tudo na tela */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+.container-geral {
+    margin-top: 100px;
+    width: 100%;
+    min-height: 100vh;
+    /* garante que o container cubra a tela inteira */
+    padding-bottom: 30px;
+    /* espaço extra no final */
+
+
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: normal;
+}
+
+form {
+    margin-bottom: 20px;
+    width: 500px;
+    align-self: center;
+    background-color: #cca277;
+    padding: 30px 40px;
+    border-radius: 12px;
+    /* borda leve */
+}
+
+form .form-group {
+    margin-top: 15px;
+}
+
+/* Labels padrão */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+}
+
+/* Labels especiais (ficam lado a lado) */
+label[for="html"],
+label[for="css"],
+label[for="javascript"],
+label[for="php"] {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="file"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    width: 100%;
+    height: 200px;
+    /* Aumenta a altura da caixa */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #e5633f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #F0BB78;
+}
+
+/* Froala customizações */
+/* Estilo para a barra de ferramentas do Froala */
+.fr-toolbar {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    max-width: 100%;
+}
+
+/* Estilo para cada botão da toolbar */
+.fr-toolbar .fr-command {
+    margin: 0 !important;
+    padding: 6px !important;
+    width: auto !important;
+    height: auto !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+@keyframes escrevendo_e_apagando {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    75% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+/* Animação para o cursor piscando */
+@keyframes cursor_piscando {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #8f4c1596;
+    }
+}

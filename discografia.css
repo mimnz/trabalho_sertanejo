@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: auto;
+}
+
+.container-geral {
+    margin-top: 100px;
+    width: 100%;
+    min-height: 100vh;
+    /* garante que o container cubra a tela inteira */
+    padding-bottom: 30px;
+    /* espaço extra no final */
+
+
+}
+
+.albuns {
+    justify-content: center;
+    height: fit-content;
+}
+
+.album {
+    margin-right: 10px;
+    flex-direction: column;
+    height: fit-content;
+    width: 23%;
+    background-color: #cca277;
+    align-items: center;
+    border-radius: 20px;
+    padding-bottom: 15px;
+}
+
+.capa-album {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+.titulo-album {
+    color: rgb(164, 40, 40);
+    text-align: center;
+}
+
+.musicas-album {
+    width: 80%;
+}
+
+/* MÚSICAS */
+
+.musicas {
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+}
+
+.musica {
+    background-color: #cca277;
+    width: 750px;
+    height: 150px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.capa-single {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100px;
+    border-radius: 20px
+}
+
+.titulo-musica {
+    width: 270px;
+    text-align: center;
+}
+
+.titulo-menor {
+    font-size: 15px;
+}
+
+@keyframes escrevendo_e_apagando {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    75% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+/* Animação para o cursor piscando */
+@keyframes cursor_piscando {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #8f4c1596;
+    }
+}

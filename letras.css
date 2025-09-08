@@ -1,0 +1,105 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: auto;
+}
+
+/* Container geral da página */
+.container-geral {
+    /* fundo da área das músicas */
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    min-height: 100vh;
+    /* cobre toda a tela */
+    width: 100%;
+}
+
+/* Container que organiza as músicas lado a lado */
+.container_letras {
+    margin-left: 20px;
+    margin-bottom:20px;
+    display: flex;
+    /* deixa as músicas lado a lado */
+    flex-wrap: wrap;
+    /* quebra linha se não couber */
+    gap: 20px;
+
+    /* garante que fiquem alinhadas pelo topo */
+    justify-content: center;
+}
+
+/* Cada música */
+.letra {
+
+    background-color: #cca277;
+    /* vermelho */
+    border: 2px solid #f8f8f8;
+    border-radius: 20px;
+    padding: 20px;
+    width: 500px;
+    /* largura consistente */
+    box-sizing: border-box;
+    min-height: 250px;
+    text-align: justify;
+
+}
+
+/* Título da música */
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+
+}
+
+.letra h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Texto da letra */
+.letra p {
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 700;
+    text-align: justify;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/*zoom com profundidade*/
+.letra:hover {
+    transform: scale(1.05);
+    /* aumenta levemente */
+    color: blueviolet;
+
+}
+
+@keyframes escrevendo_e_apagando {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    75% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+/* Animação para o cursor piscando */
+@keyframes cursor_piscando {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #8f4c1596;
+    }
+}

@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: auto;
+}
+
+/* Container geral da página */
+.container-geral {
+    padding-bottom: 30px;
+    margin-top: 65px;
+
+}
+
+.titulo-index {
+    justify-content: flex-end;
+    align-items: self-end;
+    color: white;
+    position: absolute;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.548);
+    font-size: 80px;
+}
+
+/* Imagem principal do Leo */
+.container_foto_leo {
+    margin-top: 25px;
+    width: 100%;
+    height: 506px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container_foto_leo::before { /*pseudo-elemento*/
+    content: ''; /*obrigatorio*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 506px;
+    background-image: url('https://fv5-6.files.fm/thumb_show.php?i=48cydqt44g&view&v=1&PHPSESSID=a7981e576e492d89012a7d767d813736d835287e'); /* Use a mesma URL da sua imagem principal */
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.containter_foto_leo .imagem-principal {
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.container_foto_leo h1 {
+    margin-top: 300px;
+}
+
+.foto_leo img {
+    width: 100vh;
+    margin: 30px 0 30px 50px;
+    height: auto;
+    overflow: hidden;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.foto_leo img:hover {
+    transform: scale(1.03);
+
+}
+
+.container-bem_vindo {
+    margin: 30px 30px 30px;
+    display: flex;
+    text-align: justify;
+    color: rgb(136, 53, 28);
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.container-bem_vindo :hover{
+    transform: scale(1.02);
+    color: #3f0909;
+    background-color: #d88d5b2a;
+    border-radius: 20px;
+}
+
+.container-bem_vindo h2 {
+    font-size: 55px;
+    transition: all 0.3s ease;
+    flex-direction: column;
+}
+
+.container-bem_vindo p {
+    font-size: 25px;
+    transition: all 0.3s ease;
+    flex-direction: column;
+}
+
+.container-bem_vindo .previa {
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+.previa img {
+    margin-top: 20px;
+    max-width: 165px;
+    border-radius: 10px;
+    height: auto;
+}
+
+/* Biografia */
+.container_bio {
+    flex-direction: column;
+    margin: 0 30px 30px;
+    padding: 20px;
+    display: flex;
+    border-radius: 20px;
+    color: rgb(136, 53, 28);
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: "Mozilla Headline", cursive;
+}
+
+.container_bio h2 {
+    font-size: 30px;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+.container_bio p {
+    font-size: 20px;
+    transition: all 0.3s ease;
+    text-align: justify;
+}
+
+.container_bio :hover {
+    transform: scale(1.02);
+    color: #3f0909;
+    background-color: #d88d5b2a;
+    border-radius: 20px;
+}
+
+
+
+/* Galeria de fotos do time */
+.fotos-container {
+    width: calc(3 * 529px + 2 * 40px);
+    /*3 fotos + 2 espaçamentos de 40px */
+    margin: 30px 0 30px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    /* espaçamento entre as fotos */
+    justify-self: center;
+}
+
+.fotos {
+    width: 529px;
+    /* largura fixa */
+    height: 374px;
+    /* altura fixa */
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+
+}
+
+.fotos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+    image-rendering: auto;
+    /* mantém a nitidez */
+
+
+}
+
+
+/* Texto sobreposto na parte inferior da imagem */
+.f_text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0);
+    text-align: center;
+    padding: 8px 0;
+    font-style: italic;
+    font-size: 14px;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.fotos:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.267);
+}
+
+.fotos:hover .f_text {
+    transform: scale(1.12);
+    background-color: #5a100683;
+    color: #ffffff;
+}
+
+@keyframes escrevendo_e_apagando {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    75% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+/* Animação para o cursor piscando */
+@keyframes cursor_piscando {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #8f4c1596;
+    }
+}
+
+/* 
+image-rendering é uma propriedade do CSS que redesenha a imagem quando ela não está em seu tamanho original. 
+Ela reestrutura a imagem de acordo com a largura definida. 
+
+Nesse código,isso foi necessário porque eu queria colocar três fotos uma ao lado da outra e,
+ por causa da largura, não conseguiria fazer sem perder a nitidez da imagem. 
+
+*/
+

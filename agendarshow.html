@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agendar Show</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="agendarshow.css">
+
+  <!-- Froala Editor -->
+  <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet"
+    type="text/css" />
+</head>
+
+<body>
+    <header>
+    <div class="container topo">
+      <div class="titulo">
+        <h1 class="titulo-pagina">Agendar Show</h1>
+        </div>
+        <menu class="container menu-principal">
+            <a class="opcao-menu" href="index.html">Início</a>
+            <a class="opcao-menu" href="discografia.html">Discografia</a>
+            <a class="opcao-menu" href="agenda.html">Agenda</a>
+            <a class="opcao-menu" href="letras.html">Letras</a>
+            <a class="opcao-menu" href="agendarshow.html">Agendar Show</a>
+        </menu>
+    </div>
+  </header>
+
+<div class="container-geral">
+  <h1 class="titulo-main">Agendar Show</h1>
+
+  <form id="formCadastro" onsubmit="processar_formulario(event)">
+    <h3>Agende seu Show</h3>
+
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Nome completo…" />
+      <div class="error" id="erroNome"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="data_show">Data do Show:</label>
+      <input type="date" id="data_show" name="data_show" />
+      <div class="error" id="erroDataShow"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu e-mail" />
+      <div class="error" id="erroEmail"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="+XX (XX) XXXXX-XXXX" maxlength="19" />
+      <div class="error" id="erroTelefone"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="estado">Escolha um estado:</label>
+      <select id="estado" name="estado">
+        <option value="">Selecione</option>
+        <option value="BA">Bahia</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PR">Paraná</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SE">Sergipe</option>
+        <option value="SP">São Paulo</option>
+      </select>
+      <div class="error" id="erroEstado"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="cidade">Cidade:</label>
+      <select id="cidade" name="cidade">
+        <option value="">Escolha uma cidade</option>
+        <option value="Salvador">Salvador</option>
+        <option value="Vitória">Vitória</option>
+        <option value="Belo Horizonte">Belo Horizonte</option>
+        <option value="Recife">Recife</option>
+        <option value="Curitiba">Curitiba</option>
+        <option value="Rio de Janeiro">Rio de Janeiro</option>
+        <option value="Porto Alegre">Porto Alegre</option>
+        <option value="Florianópolis">Florianópolis</option>
+        <option value="Aracaju">Aracaju</option>
+        <option value="São Paulo">São Paulo</option>
+      </select>
+      <div class="error" id="erroCidade"></div>
+    </div>
+
+    <div class="form-group">
+      <label>Horários de duração do Show:</label>
+      <label><input type="checkbox" name="h_show" value="1h" /> 1 hora</label>
+      <label><input type="checkbox" name="h_show" value="2h" /> 2 horas</label>
+      <label><input type="checkbox" name="h_show" value="2.5h" /> 2 horas e meia</label>
+      <div class="error" id="erroHShow"></div>
+    </div>
+
+    <div class="form-group">
+      <label>Estilo de Evento:</label>
+      <label><input type="radio" name="evento" value="festa" /> Festival de Música</label>
+      <label><input type="radio" name="evento" value="casamento" /> Casamentos</label>
+      <label><input type="radio" name="evento" value="radios" /> Rádios</label>
+      <label><input type="radio" name="evento" value="programa" /> Programa de TV</label>
+      <label><input type="radio" name="evento" value="navio" /> Cruzeiros</label>
+      <label><input type="radio" name="evento" value="resort" /> Resort</label>
+      <div class="error" id="erroEvento"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="comentarios">Se quiser deixar sugestões de músicas:</label>
+      <textarea id="comentarios" name="comentarios" placeholder="Digite seus comentários..."></textarea>
+      <div class="error" id="erroComentarios"></div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit">Enviar</button>
+    </div>
+  </form>
+  </div>
+
+  <footer class="container_rodape">
+    <div class="informacoes">
+        <div class="container redes-sociais">
+        <h1 class="titulo-main">Siga o Leão da Galera nas Redes Sociais!</h1>
+        <div class="container rede-social">
+          <img
+            src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-white-icon.png"
+            alt="" class="imagem-rede-social">
+        </div>
+
+        <div class="container rede-social">
+          <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/tiktok-white-icon.png"
+            alt="" class="imagem-rede-social">
+        </div>
+
+        <div class="container rede-social">
+          <img src="https://img.icons8.com/m_rounded/512/FFFFFF/facebook-new.png" alt="" class="imagem-rede-social">
+        </div>
+
+        <div class="container rede-social">
+          <img
+            src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/youtube-app-white-icon.png"
+            alt="" class="imagem-rede-social">
+        </div>
+
+        <div class="container rede-social">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/X_logo_2023_%28white%29.png/500px-X_logo_2023_%28white%29.png"
+            alt="" class="imagem-rede-social">
+        </div>
+
+        <div class="container rede-social">
+          <img
+            src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-white-icon.png"
+            alt="" class="imagem-rede-social">
+        </div>
+
+        <div class="container rede-social">
+          <img src="https://img.icons8.com/ios7/600/FFFFFF/whatsapp--v2.png" alt="" class="imagem-rede-social">
+        </div>
+
+        <div class="container rede-social">
+          <img src="https://img.icons8.com/m_sharp/512/FFFFFF/telegram-app.png" alt="" class="imagem-rede-social">
+        </div>
+
+        <div class="container rede-social">
+          <img
+            src="https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/4X/6/6/8/668ed10627b11c191c5aaf49b1a13408c0dc2c29.png"
+            alt="" class="imagem-rede-social">
+        </div>
+
+        <div class="container rede-social">
+          <img src="https://img.icons8.com/ios_filled/512/FFFFFF/chatgpt.png" alt="" class="imagem-rede-social">
+        </div>
+
+        <div class="container rede-social">
+          <img src="https://img.icons8.com/ios11/512/FFFFFF/wikipedia.png" alt="" class="imagem-rede-social">
+        </div>
+
+        <div class="container rede-social">
+          <img src="https://img.icons8.com/ios11/512/FFFFFF/github.png" alt="" class="imagem-rede-social">
+        </div>
+        </div>
+      <h2>Telefone: (79) 99123-4567, Email: leaodagalera@riachuelo.com</h2>
+      </div>
+
+      <h1 class="titulo-main">TIGRINHO APROVADO POR LEÃO DA GALERA APOSTE AGORA</h1>
+      <img src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/6fb3/live/32fde300-a352-11ef-a4fe-a3e9a6c5d640.jpg.webp" alt="" class="tigrinho">
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Máscara do telefone
+    document.addEventListener('DOMContentLoaded', function () {
+      const telefoneInput = document.getElementById('telefone');
+      telefoneInput.addEventListener('input', function () {
+        let valor = telefoneInput.value.replace(/\D/g, '');
+        if (valor.length > 19) valor = valor.substring(0, 19);
+
+        let formatado = '';
+        if (valor.length > 0 && valor[0] !== '+') valor = '+' + valor;
+        if (valor.length > 1) formatado = valor.substring(0, 3);
+        if (valor.length > 3) formatado += ' (' + valor.substring(3, 5) + ') ';
+        if (valor.length > 5) formatado += valor.substring(5, 10);
+        if (valor.length > 9) formatado += '-';
+        if (valor.length > 10) formatado += valor.substring(10, 15);
+
+        telefoneInput.value = formatado;
+      });
+    });
+
+    // Validação do formulário
+    function processar_formulario(event) {
+      event.preventDefault();
+      let nome = document.querySelector("#nome").value;
+      let dataShow = document.querySelector("#data_show").value;
+      let email = document.querySelector("#email").value;
+      let telefone = document.querySelector("#telefone").value;
+      let cidade = document.querySelector("#cidade").value;
+      let h_show = document.querySelectorAll('input[name="h_show"]:checked');
+      let evento = document.querySelector('input[name="evento"]:checked');
+      let isValid = true;
+
+      // Limpa erros
+      document.querySelectorAll(".error").forEach(el => el.textContent = "");
+
+      // Validações
+      if (nome.trim() === "") { document.getElementById("erroNome").textContent = "O nome é obrigatório."; isValid = false; }
+      if (dataShow === "") { document.getElementById("erroDataShow").textContent = "A data do show é obrigatória."; isValid = false; }
+      if (email.trim() === "") { document.getElementById("erroEmail").textContent = "O e-mail é obrigatório."; isValid = false; }
+      if (telefone.trim() === "") { document.getElementById("erroTelefone").textContent = "O telefone é obrigatório."; isValid = false; }
+      if (cidade === "") { document.getElementById("erroCidade").textContent = "A cidade é obrigatória."; isValid = false; }
+      if (h_show.length === 0) { document.getElementById("erroHShow").textContent = "Selecione pelo menos um horário."; isValid = false; }
+      if (!evento) { document.getElementById("erroEvento").textContent = "Escolha o tipo de evento."; isValid = false; }
+
+      if (isValid) {
+        alert("Agendamento feito! Entraremos em contato em três dias.");
+        document.getElementById("formCadastro").reset();
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
+  <script> new FroalaEditor('textarea'); </script>
+</body>
+
+
+</html>
