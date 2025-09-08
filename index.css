@@ -221,37 +221,4 @@ body {
     color: #ffffff;
 }
 
-@keyframes escrevendo_e_apagando {
-    0% {
-        width: 0;
-    }
-    50% {
-        width: 100%;
-    }
-    75% {
-        width: 100%;
-    }
-    100% {
-        width: 0;
-    }
-}
-
-/* Animação para o cursor piscando */
-@keyframes cursor_piscando {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: #8f4c1596;
-    }
-}
-
-/* 
-image-rendering é uma propriedade do CSS que redesenha a imagem quando ela não está em seu tamanho original. 
-Ela reestrutura a imagem de acordo com a largura definida. 
-
-Nesse código,isso foi necessário porque eu queria colocar três fotos uma ao lado da outra e,
- por causa da largura, não conseguiria fazer sem perder a nitidez da imagem. 
-
-*/
 
