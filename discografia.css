@@ -22,70 +22,112 @@ body {
 .albuns {
     justify-content: center;
     height: fit-content;
+    justify-self: center;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    transition: all .4s ease;
 }
 
 .album {
     margin-right: 10px;
-    flex-direction: column;
+    display: flex;
     height: fit-content;
-    width: 23%;
+    flex-direction: column;
+    width: 350px;
     background-color: #cca277;
     align-items: center;
     border-radius: 20px;
-    padding-bottom: 15px;
+    transition: all .4s ease;
+}
+
+.album ol {
+    color: rgb(136, 53, 28);
+    transition: all .4s ease;
 }
 
 .capa-album {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 15px;
-    width: 200px;
+    width: 350px;
     border-radius: 20px;
+    transition: all .4s ease;
 }
 
 .titulo-album {
-    color: rgb(164, 40, 40);
-    text-align: center;
+    color: rgb(136, 53, 28);
+    text-align: left;
+    transition: all .4s ease;
 }
 
 .musicas-album {
     width: 80%;
+    transition: all .4s ease;
+}
+
+.albuns :hover {
+    transform: scale(1.05);
+    color: #3f0909;
+    background-color: #d88d5b2a;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.267);
 }
 
 /* MÚSICAS */
 
 .musicas {
-    flex-direction: column;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    justify-self: center;
     height: fit-content;
+    flex-wrap: wrap;
+    gap: 20px;
+    transition: all .4s ease;
+
 }
 
 .musica {
     background-color: #cca277;
-    width: 750px;
+    width: fit-content;
     height: 150px;
     border-radius: 20px;
-    margin-bottom: 20px;
-    justify-content: space-around;
+    padding: 20px;
+    display: flex;
     align-items: center;
+    transition: all .4s ease;
+}
+
+.musicas :hover {
+    transform: scale(1.05);
+    color: #3f0909;
+    background-color: #d88d5b2a;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.267);
 }
 
 .capa-single {
     display: block;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 100px;
-    border-radius: 20px
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    margin-left: -20px;
+    margin-right: 20px;
+    justify-content: left;
+    transition: all .4s ease;
 }
 
 .titulo-musica {
     width: 270px;
-    text-align: center;
+    text-align: left;
+    color: rgb(136, 53, 28);
+    transition: all .4s ease;
 }
 
 .titulo-menor {
     font-size: 15px;
+    text-align: left;
+    transition: all .4s ease;
 }
 
 @keyframes escrevendo_e_apagando {
