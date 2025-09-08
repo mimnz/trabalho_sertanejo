@@ -112,6 +112,10 @@ body {
     padding: 10px;
 }
 
+.container-bem_vindo .previa:hover {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.267);
+}
+
 .previa img {
     margin-top: 20px;
     max-width: 165px;
