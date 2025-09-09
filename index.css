@@ -5,7 +5,7 @@
 }
 
 body {
-    overflow: auto;
+    overflow: scroll;
 }
 
 /* Container geral da página */
@@ -220,5 +220,6 @@ body {
     background-color: #5a100683;
     color: #ffffff;
 }
+
 
 
