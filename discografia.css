@@ -132,9 +132,8 @@ body {
 
 .lyric-videos {
     justify-content: center;
-}
-
-.lyric-video {
+    justify-self: center;
     display: flex;
     margin-bottom:25px;
 }
+
